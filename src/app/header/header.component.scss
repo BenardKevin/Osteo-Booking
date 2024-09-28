@@ -1,0 +1,191 @@
+$color_1: #ffffff;
+$color_2: rgba(255, 255, 255, 0.6);
+$color_3: rgba(255, 255, 255, 0.8);
+$color_4: #212529;
+$color_5: #1869a3;
+$color_6: #2092ed;
+$color_7: #1f7f31;
+$color_8: #28a745;
+$color_9: #d8a406;
+$color_10: #ffc107;
+$background-color_1: #4b249b;
+$background-color_2: rgba(255, 255, 255, 0.3);
+$background-color_3: #BCA7E8;
+$border-color_1: #1869a3;
+$border-color_2: #2092ed;
+$border-color_3: #1f7f31;
+$border-color_4: #28a745;
+$border-color_5: #d8a406;
+$border-color_6: #ffc107;
+
+/*======== COLORS ===========*/
+.masthead {
+  padding: 3rem 0 7rem;
+  position: relative;
+  background-color: $background-color_1;
+  background-image: linear-gradient(45deg, $background-color_1 0%, $background-color_3 100%);
+  background-size: cover;
+  z-index: 0;
+  svg.wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+  h1 {
+    color: $color_1;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.1;
+    z-index: 1;
+  }
+  h2 {
+    color: $color_2;
+    font-weight: 600;
+    z-index: 1;
+    font-size: 1.2rem;
+  }
+  a {
+    color: $color_3;
+    z-index: 1;
+    &:hover {
+      color: $color_1;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+  .masthead-cards {
+    position: relative;
+    z-index: 1;
+    .shape {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $background-color_2;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    }
+    .card {
+      opacity: 1;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.05rem;
+      color: $color_4;
+      transition: 0.15s all;
+      &:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      &:active {
+        cursor: wait;
+      }
+    }
+    .card.border-bottom-blue {
+      &:hover {
+        .logo_doctolib {
+          transition: 0.15s all;
+          filter: invert(32%) sepia(49%) saturate(2476%) hue-rotate(86deg)
+            brightness(98%) contrast(119%);
+        }
+        color: $color_6;
+        .border-bottom-blue {
+          border-color: $border-color_2;
+        }
+      }
+      color: $color_5;
+    }
+    .card.border-bottom-green {
+      color: $color_7;
+      &:hover {
+        color: $color_8;
+        .border-bottom-green {
+          border-color: $border-color_4;
+        }
+      }
+    }
+    .card.border-bottom-yellow {
+      color: $color_9;
+      &:hover {
+        color: $color_10;
+        .border-bottom-yellow {
+          border-color: $border-color_6;
+        }
+      }
+    }
+  }
+}
+.masthead-page {
+  padding: 1rem 0 4rem;
+}
+.border-bottom-blue {
+  border-bottom: 0.4rem solid !important;
+  border-color: $border-color_1;
+}
+.border-bottom-green {
+  border-bottom: 0.4rem solid !important;
+  border-color: $border-color_3;
+}
+.border-bottom-red {
+  border-bottom: 0.4rem solid !important;
+}
+.border-bottom-yellow {
+  border-bottom: 0.4rem solid !important;
+  border-color: $border-color_5;
+}
+.shadow-lg {
+  box-shadow:
+    0 2rem 1.5rem -1.5rem rgba(33, 37, 41, 0.15),
+    0 0 1.5rem 0.5rem rgba(33, 37, 41, 0.05) !important;
+}
+.a {
+  fill: none;
+}
+.b {
+  clip-path: url(#a);
+}
+.c {
+  fill: $color_1;
+}
+.d {
+  fill: $color_1;
+  opacity: 0.5;
+  isolation: isolate;
+}
+.ld {
+  max-width: 80%;
+}
+.ms-lg-5 {
+  margin-left: 4.5rem !important;
+}
+.logo_doctolib {
+  filter: invert(32%) sepia(49%) saturate(2476%) hue-rotate(86deg)
+    brightness(68%) contrast(119%);
+}
+.container-s {
+  max-width: 308px;
+}
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 992px) {
+  .masthead {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .masthead-page {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

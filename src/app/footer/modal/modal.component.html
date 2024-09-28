@@ -1,0 +1,26 @@
+<div #myModal id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span #closeBtn class="close">&times;</span>
+      <h2>Mentions Légales</h2>
+    </div>
+    <div class="modal-body">
+      <h3>1 - Édition du site</h3>
+      <div [innerHTML]="mentionsLegales1"></div>
+      <h3>2 - Propriété intellectuelle et contrefaçons</h3>
+      <div [innerHTML]="mentionsLegales2"></div>
+      <h3>3 - Limitations de responsabilité</h3>
+      <div [innerHTML]="mentionsLegales3"></div>
+      <h3>4 - CNIL et gestion des données personnelles</h3>
+      <div [innerHTML]="mentionsLegales4"></div>
+      <h3>5 - Liens hypertextes et cookies</h3>
+      <div [innerHTML]="mentionsLegales5"></div>
+      <h3>6 - Droit applicable et attribution de juridiction</h3>
+      <div [innerHTML]="mentionsLegales6"></div>
+    </div>
+    <div class="modal-footer">
+      <h3>Merci de votre visite</h3>
+    </div>
+  </div>
+</div>
+<button #myBtn id="myBtn" class="btn-text">Mentions légales</button>

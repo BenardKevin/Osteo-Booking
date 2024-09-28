@@ -1,0 +1,23 @@
+.google-reviews {
+  color: #000;
+  background-color: #f3f2f2;
+  .row {
+    align-items: center;
+    justify-content: center;
+    .card {
+      --bs-card-border-radius: 3.375rem !important;
+      h5 {
+        text-align: center;
+      }
+      .blob {
+        height: 28px;
+        width: 200px;
+        background-color: #ffffff;
+        position: relative;
+        top: -2.25em;
+        right: -33.2em;
+        z-index: 2147483647;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  .modal-content {
+    max-height: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #4b249b;
+      color: white;
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .modal-body {
+      padding: 2px 16px;
+      overflow-y: auto;
+      text-align: left;
+      h3 {
+        text-decoration: dashed;
+        letter-spacing: .1px;
+        padding: 1em 0 0 0;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 24px;
+      }
+    }
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #4b249b;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+.btn-text {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+
+}
+
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}

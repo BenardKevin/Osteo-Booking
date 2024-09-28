@@ -1,0 +1,143 @@
+$color_white: #FFF;
+
+$color_footer_text: $color_white;
+$color_footer_icon: $color_white;
+$color_footer_contact_link: #ffffff;
+$color_footer_contact_link_event: #011a3e;
+
+$color_footer_area: #8565c9;
+$color_copyright_area: #4b249b;
+
+.deneb_footer {
+  text-align: center;
+  background: $color_footer_area;
+  .widget_wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    .widget {
+      color: $color_footer_text;
+      .widget_map {
+        width: 100%;
+        height: auto;
+      }
+      .widget_title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        line-height: 26px;
+        h4 {
+          font-weight: bold;
+          &:after {
+            content: "";
+            display: block;
+            max-width: 38px;
+            height: 2px;
+            margin-top: 5px;
+          }
+        }
+      }
+      table {
+        td {
+          color: $color_footer_text;
+        }
+      }
+    }
+    .widget_contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .contact_info {
+        .single_info {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+          .icon {
+            align-items: center;
+            font-size: 12px;
+            color: $color_footer_icon;
+            margin: 0 10px;
+          }
+          .info {
+            p {
+              a {
+                color: $color_footer_contact_link;
+                &:hover {
+                  color: $color_footer_contact_link_event;
+                }
+                &:focus {
+                  color: $color_footer_contact_link_event;
+                }
+              }
+              span {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright_area {
+    background: $color_copyright_area;
+    letter-spacing: .1px;
+    padding: 1em 0 0 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    .copyright_text {
+      text-align: center;
+      p {
+        color: $color_footer_text;
+      }
+    }
+  }
+}
+.ocean {
+  height: 2em; /* change the height of the waves here */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  .wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath  d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%238565c9'/%3E%3C/svg%3E");
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 100s linear infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  .wave_copyright_area {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath  d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%234b249b'/%3E%3C/svg%3E");
+      position: absolute;
+      width: 300%;
+      height: 100%;
+      animation: wave 200s linear infinite;
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+}
+
+@media (max-width: 767px) {
+  .deneb_footer {
+    .widget_wrapper {
+      .sub-row {
+        width: 90% !important;
+      }
+      .widget {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+

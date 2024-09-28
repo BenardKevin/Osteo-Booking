@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 border p-4 shadow bg-light">
+            <div class="col-12">
+                <h3 class="fw-normal text-secondary fs-4 text-uppercase mb-4">Prenez votre rendez-vous en ligne</h3>
+            </div>
+            <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Prénom" formControlName="firstName">
+                        <div *ngIf="appointmentForm.get('firstName')?.invalid && appointmentForm.get('firstName')?.touched" class="text-danger">
+                            Prénom requis
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Nom de famille" formControlName="lastName">
+                        <div *ngIf="appointmentForm.get('lastName')?.invalid && appointmentForm.get('lastName')?.touched" class="text-danger">
+                            Nom de famille requis
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Numéro de téléphone" formControlName="phoneNumber">
+                        <div *ngIf="appointmentForm.get('phoneNumber')?.invalid && appointmentForm.get('phoneNumber')?.touched" class="text-danger">
+                            Numéro de téléphone requis
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                        <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched" class="text-danger">
+                            Email invalide
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="time" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select">
+                            <option selected>Choisisser un motif de consultation :</option>
+                            <option value="1">Première consultation d'osthéopathie</option>
+                            <option value="2">Consultation de suivi d'osthéopathie</option>
+                            <option value="3">Enfant - Première consultation d'osthéopathie</option>
+                            <option value="4">Enfant - Consultation de suivi d'osthéopathie</option>
+                            <option value="3">Femme enceinte - Première consultation d'osthéopathie</option>
+                            <option value="5">Femme enceinte - Consultation de suivi d'osthéopathie</option>
+                            <option value="6">Nourrisson - Première consultation d'osthéopathie</option>
+                            <option value="7">Nourrisson - Consultation de suivi d'osthéopathie</option>
+                            <option value="8">Consultation d'osthéopathie + Ronronpathie (chat)</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Message"></textarea>
+                    </div>
+                    <div class="col-12 mt-5">                        
+                        <button type="submit" class="btn btn-primary float-end">Confirmer</button>
+                        <button (click)="closeDialog()" type="button" class="btn btn-outline-secondary float-end me-2">Annuler</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

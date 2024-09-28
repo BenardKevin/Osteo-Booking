@@ -1,0 +1,108 @@
+<div class="container bootstrap snippets bootdeys d-print-block">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 content-card">
+        <div class="card-big-shadow">
+          <div
+            class="card card-just-text"
+            data-background="color"
+            data-color="blue"
+            data-radius="none"
+          >
+            <div class="content">
+              <h4 class="category">Rendez-Vous</h4>
+              <h6 class="title">En ligne</h6>
+              <p class="descript">
+                Réservation en cabinet via
+                <a
+                  href="https://www.doctolib.fr/osteopathe/grasse/florine-benard"
+                  target="_blank"
+                  >Doctolib</a
+                >.
+              </p>
+              <p class="descript">
+                Ou réservation à domicile en cliquant
+                <a href="https://fbosteo.simplybook.it/v2/?widget-type=iframe&theme=creative&theme=creative&timeline=modern&datepicker=top_calendar#book/count/1/"
+                target="_blank"
+                >ici</a>.
+                N'oubliez pas de fournir votre adresse pour un rendez-vous à
+                domicile.
+              </p>
+              <h6 class="title">Par téléphone / WhatsApp</h6>
+              <p class="descript"> au
+                <a href="tel:+33651171266">06 51 17 12 66</a>
+              </p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 content-card">
+        <div class="card-big-shadow">
+          <div
+            class="card card-just-text"
+            data-background="color"
+            data-color="green"
+            data-radius="none"
+          >
+            <div class="content">
+              <h4 class="category">Tarifs</h4>
+              <h2 class="title">Au cabinet</h2>
+              <p class="descript">60€ les jours ouvrés. 65€ le samedi, 75€ les dimanches et jours fériés.</p>
+              <h4 class="title">À votre domicile</h4>
+              <p class="descript">
+                75€ à votre domicile en zone verte ( sur Grasse, Mouans-Sartoux, Mougins, Pégomas, La Roquette, Auribeau, Peymeinade, Plascassier),
+              </p>
+              <img id="myImg" #myImg [src]="imgSrc" [alt]="imgAlt" (click)="openModal(myImg)"/>
+              <p class="descript">
+                80€ en zone Orange (sur Le Cannet, Cabris, Mandelieu la Napoule, Valbonne, Opio, Chateauneuf, Magagnosc, Cabris, Spéracèdes, Le Tignet, Val de Tignet, Tanneron, Castellaras)
+              </p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 content-card">
+        <div class="card-big-shadow">
+          <div
+            class="card card-just-text"
+            data-background="color"
+            data-color="yellow"
+            data-radius="none"
+          >
+            <div class="content">
+              <h4 class="category">Paiements acceptés</h4>
+              <p class="descript">Espèces, chèque, ou Paypal</p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+        <div class="card-big-shadow mt-4">
+          <div
+            class="card card-just-text"
+            data-background="color"
+            data-color="orange"
+            data-radius="none"
+          >
+            <div class="content">
+              <h4 class="category">Remboursement</h4>
+              <h4 class="title">Mutuelle santé</h4>
+              <p class="descript">
+                Les séances d'ostéopathie ne sont pas remboursées par la CPAM,
+                mais certaines mutuelles les remboursent à 100% (renseignez vous
+                auprès de votre mutuelle).
+              </p>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="myModal" #myModal class="modal">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" id="img01" [src]="imgSrc">
+    <div id="caption">
+      <a href="https://fbosteo.simplybook.it/v2/?widget-type=iframe&theme=creative&theme=creative&timeline=modern&datepicker=top_calendar#book/count/1/"
+      target="_blank">{{ imgAlt }}</a>
+    </div>
+  </div>

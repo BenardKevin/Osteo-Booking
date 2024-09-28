@@ -1,0 +1,78 @@
+<div class="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+<footer class="deneb_footer">
+  <div class="widget_wrapper">
+    <div class="container">
+      <div
+        class="row d-md-flex align-items-xxl-center justify-content-xxl-around">
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-4 p-0 sub-row">
+          <div class="widget widget_hours">
+            <div class="widget_title">
+              <h4>{{ titleHours }}</h4>
+            </div>
+            <table class="table text-center text-black">
+              <tbody class="font-weight-normal">
+                <tr *ngFor="let hour of openingHours">
+                  <td [style.font-weight]="hour.day === currentDay ? 'bold' : '' ">{{ hour.day }} :</td>
+                  <td [style.font-weight]="hour.day === currentDay ? 'bold' : '' ">{{ hour.time }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-4 p-0 sub-row">
+          <div class="widget widget_map">
+            <div class="widget_title">
+              <h4>{{ titlePosition }}</h4>
+            </div>
+          </div>
+          <div class="map-container">
+            <iframe height="260" width="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" [src]="sanitizedGoogleUrl"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-4 p-0 sub-row">
+          <div class="widget widget_contact">
+            <div class="widget_title">
+              <h4>{{ titleContacts }}</h4>
+            </div>
+            <div class="contact_info" *ngFor="let contact of contactList">
+              <div class="single_info">
+                <div class="icon">
+                  <i class="{{ contact.icon }}"></i>
+                </div>
+                <div class="info">
+                  <p>
+                    {{ contact.label }} :
+                    <a [href]="contact.link" target="_blank">{{
+                      contact.text
+                    }}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ocean">
+    <div class="wave_copyright_area"></div>
+  </div>
+  <div class="copyright_area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="copyright_text">
+            <app-modal></app-modal>
+            <p>{{ copyright }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
