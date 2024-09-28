@@ -11,7 +11,7 @@ Ce projet a été généré avec [Angular CLI](https://github.com/angular/angula
 - **Annulation et modification des séances** : Possibilité d'annuler ou de reprogrammer les rendez-vous.
 
 ## Captures d'écran
-![screencapture-localhost-4200-2024-09-28-14_42_33](https://github.com/user-attachments/assets/1751f320-34ee-4ae2-aaa1-a8af99ada0d4)
+![screencapture-localhost-4200-2024-09-28-14_42_33](https://github.com/user-attachments/assets/a66f3593-afd7-4a5e-9ec6-248e033a6417)
 
 ## Prérequis
 
